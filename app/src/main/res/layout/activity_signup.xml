@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
     tools:context=".signup">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/center_line_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/center_line_sign_up"
+            android:layout_centerInParent="true"
+            android:hint="john@doe.com"
+            android:layout_marginBottom="80dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:layout_height="match_parent"
+            android:id="@+id/sign_up_email"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/center_line_sign_up"
+        android:hint="password"
+        app:passwordToggleEnabled="true"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_up_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/center_line_sign_up"
+        android:hint="password confirm"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/pwd_confirm_signup"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_up_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pwd_confirm_signup"
+        android:layout_marginTop="30dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/login_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerButton"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Already a user? Login" />
+
+</RelativeLayout>
