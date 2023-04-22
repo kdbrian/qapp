@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343717799228",
+    "project_id": "qapp-f22b3",
+    "storage_bucket": "qapp-f22b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343717799228:android:7f137dbebb56b80c072a39",
+        "android_client_info": {
+          "package_name": "com.star.qapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343717799228-dlke3p2phbt4s6oiabhn67npvfpumf5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQDRTCVL-JLRKW5ITVl1YTFncmH1dk6IY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343717799228-dlke3p2phbt4s6oiabhn67npvfpumf5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
