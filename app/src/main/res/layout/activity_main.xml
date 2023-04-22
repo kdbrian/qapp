@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,67 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/center_line"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@+id/center_line"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:hint="john@doe.com"
+        android:padding="3dp"
+        >
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/center_line"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        app:passwordToggleEnabled="true"
+        android:hint="password"
+        android:padding="3dp"
+        android:id="@+id/pwdinputlayout"
+        >
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@+id/pwdinputlayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not a user? Register Here"
+        android:layout_below="@id/loginbtn"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true" />
+</RelativeLayout>
