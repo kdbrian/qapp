@@ -7,11 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/center_line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/center_line"
-        />
+        android:layout_centerInParent="true" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
@@ -21,19 +20,22 @@
         android:layout_centerInParent="true"
         android:hint="john@doe.com"
         android:padding="3dp"
+        android:id="@+id/email_inputlayout"
+        android:layout_marginBottom="50dp"
         >
-        <EditText
-            android:id="@+id/email"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_email"
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
             />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/center_line"
+        android:layout_below="@+id/email_inputlayout"
         android:gravity="center_horizontal"
         android:layout_centerInParent="true"
         app:passwordToggleEnabled="true"
@@ -41,8 +43,8 @@
         android:padding="3dp"
         android:id="@+id/pwdinputlayout"
         >
-        <EditText
-            android:id="@+id/password"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password"
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:inputType="textPassword"
@@ -59,15 +61,17 @@
         android:layout_marginTop="30dp"
         android:textAllCaps="false"
         />
+
     <TextView
+        android:id="@+id/sign_up_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Not a user? Register Here"
         android:layout_below="@id/loginbtn"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
-        android:textSize="15sp"
-        android:padding="4dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:padding="4dp"
+        android:text="Not a user? Register Here"
+        android:textSize="15sp" />
 </RelativeLayout>
