@@ -7,7 +7,7 @@ data class Answer @JvmOverloads constructor(
     val id: Int = 0,
     val question: String = "",
     val description: String? = null,
-    val answers: Answers = Answers(),
+    val answers: QuestionAnswersChoices = QuestionAnswersChoices(),
     val multiple_correct_answers: Boolean = false,
     val correct_answers: CorrectAnswers? = null,
     val correct_answer: String? = null,
@@ -16,13 +16,13 @@ data class Answer @JvmOverloads constructor(
     val tags: List<Tag> = emptyList(),
     val category: String = "",
     val difficulty: String = ""
-) {
+) : java.io.Serializable{
     // Secondary constructor to create Question object from a JSON string
     constructor(json: JSONObject) : this(
         id = json.getInt("id"),
         question = json.getString("question"),
         description = json.optString("description", null),
-        answers = Answers(
+        answers = QuestionAnswersChoices(
             answer_a = (json).getJSONObject("answers").getString("answer_a"),
             answer_b = (json).getJSONObject("answers").getString("answer_b"),
             answer_c = (json).getJSONObject("answers").getString("answer_c"),
@@ -77,24 +77,16 @@ data class Answer @JvmOverloads constructor(
         difficulty = (json).getString("difficulty")
     )
 
-    fun resolveAnswer(value:String) : Boolean{
-        var ret = when(value){
-            "true" -> true
-            "false"->false
-            else -> false
-        }
-        return  ret
-    }
 }
 
-data class Answers @JvmOverloads constructor(
+data class QuestionAnswersChoices @JvmOverloads constructor(
     val answer_a: String? = null,
     val answer_b: String? = null,
     val answer_c: String? = null,
     val answer_d: String? = null,
     val answer_e: String? = null,
     val answer_f: String? = null
-)
+):java.io.Serializable
 
 data class CorrectAnswers @JvmOverloads constructor(
     val answer_a_correct: Boolean = false,
@@ -103,8 +95,8 @@ data class CorrectAnswers @JvmOverloads constructor(
     val answer_d_correct: Boolean = false,
     val answer_e_correct: Boolean = false,
     val answer_f_correct: Boolean = false
-)
+):java.io.Serializable
 
 data class Tag @JvmOverloads constructor(
     val name: String = ""
-)
+):java.io.Serializable

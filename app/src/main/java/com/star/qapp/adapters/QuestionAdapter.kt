@@ -9,9 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.star.qapp.R
-import com.star.qapp.model.Answers
+import com.star.qapp.model.Answer
+import com.star.qapp.model.QuestionAnswersChoices
+import com.star.qapp.model.Tag
 
-class QuestionAdapter(val questionAnswers : List<Answers>?, var context: Context) : RecyclerView.Adapter<QuestionAdapter.CustViewHolder3>(){
+class QuestionAdapter(val questionAnswers : List<Answer>, var context: Context) : RecyclerView.Adapter<QuestionAdapter.CustViewHolder3>(){
 
     class CustViewHolder3 (itemview : View): RecyclerView.ViewHolder(itemview) {
 
@@ -27,7 +29,7 @@ class QuestionAdapter(val questionAnswers : List<Answers>?, var context: Context
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustViewHolder3 {
-        Log.d("QAdapter","Oncreate vh called")
+//        Log.d("QAdapter","Oncreate vh called")
         //inflating the questions
         val view :View = LayoutInflater.from(parent.context).inflate(R.layout.question_view, parent, false)
         return CustViewHolder3(view)
@@ -38,20 +40,32 @@ class QuestionAdapter(val questionAnswers : List<Answers>?, var context: Context
     }
 
     override fun onBindViewHolder(holder: CustViewHolder3, position: Int) {
-        fillTags(listOf("devops","nodejs"), holder, context)
-        fillChoices(listOf("Choice 1", "Choice 2", "Choice 2"), holder, context)
+//        fill the tags for the question and for the choices available
+        fillTags(questionAnswers[position].tags, holder, context)
+//        fillChoices(listOf("Choice 1", "Choice 2", "Choice 2"), holder, context)
+        fillChoices(
+            listOf(
+                questionAnswers[position].answers.answer_a,
+                questionAnswers[position].answers.answer_b,
+                questionAnswers[position].answers.answer_c,
+                questionAnswers[position].answers.answer_d,
+                questionAnswers[position].answers.answer_e,
+                questionAnswers[position].answers.answer_f,
+            )
+            , holder, context)
 
-        holder.mqn_text.setText("Hey there ?\nThis is a example of a question you are\n likely to expect")
+//        holder.mqn_text.setText("Hey there ?\nThis is a example of a question you are\n likely to expect")
+        holder.mqn_text.setText(questionAnswers[position].question)
     }
 
-//    fill the tags of this question
-    fun fillTags(tags : List<String>, custViewHolder3: CustViewHolder3, context: Context){
+//    fill the tags of current question
+    fun fillTags(tags : List<Tag>, custViewHolder3: CustViewHolder3, context: Context){
         custViewHolder3.questionsTags.layoutManager = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         custViewHolder3.questionsTags.adapter = QuestionTagAdapter(tags)//TODO:pass tags
     }
 
 //    fill the choices of this question
-    fun fillChoices(choices: List<String>,custViewHolder3: CustViewHolder3, context: Context){
+    fun fillChoices(choices: List<String?>,custViewHolder3: CustViewHolder3, context: Context){
         custViewHolder3.questionsChoices.layoutManager = GridLayoutManager(context, 1,GridLayoutManager.VERTICAL, false)
         custViewHolder3.questionsChoices.adapter = QuestionChoicesAdapter(choices)
     }

@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.star.qapp.R
+import com.star.qapp.model.Tag
 
-class QuestionTagAdapter(val tags : List<String>) : RecyclerView.Adapter<QuestionTagAdapter.CustViewHolder>() {
+class QuestionTagAdapter(val tags : List<Tag>) : RecyclerView.Adapter<QuestionTagAdapter.CustViewHolder>() {
 
 
     class CustViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -31,6 +32,6 @@ class QuestionTagAdapter(val tags : List<String>) : RecyclerView.Adapter<Questio
 
     override fun onBindViewHolder(holder: CustViewHolder, position: Int) {
 //        set the fields
-        holder.content.text = tags[position]
+        holder.content.text = tags[position].name
     }
 }

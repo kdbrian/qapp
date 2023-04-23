@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:elevation="10dp"
-        android:padding="10dp"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:cardCornerRadius="10dp"
         android:layout_centerHorizontal="true"
         >
@@ -60,7 +62,6 @@
                 android:layout_height="match_parent"
                 android:scrollbars="vertical"
                 android:orientation="vertical"
-                android:overScrollMode="ifContentScrolls"
                 >
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -69,8 +70,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="10dp"
-                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:layout_margin="5dp"
             >
                 <Button
                     android:layout_width="wrap_content"
