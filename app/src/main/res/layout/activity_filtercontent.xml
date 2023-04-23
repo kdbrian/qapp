@@ -37,7 +37,7 @@
 
     </LinearLayout>
 
-<!--    difficulty check boxes-->
+<!--    difficulty buttons -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,131 +49,86 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         >
-        <androidx.cardview.widget.CardView
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="18dp"
-            android:elevation="18dp"
-            android:backgroundTint="#2F313E"
-            android:padding="5dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
             android:layout_margin="5dp"
             >
-            <LinearLayout
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:padding="10dp"
+                android:layout_marginEnd="20dp"
                 >
-                <CheckBox
-                    android:id="@+id/chkeasy"
-                    android:textDirection="rtl"
-                    android:layout_width="30dp"
-                    android:textSize="10sp"
-                    android:layout_height="match_parent"
-                    android:buttonTint="@color/white"
-                    android:textColor="@color/white"
-                    />
                 <TextView
-                    android:id="@+id/chckboxeasy"
+                    android:id="@+id/easy"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Easy"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:gravity="center"
-                    android:paddingEnd="10dp"
+                    android:padding="20dp"
+                    android:background="#004D40"
                     android:textColor="@color/white"
+                    android:layout_gravity="center"
                     />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-<!--      medium-->
-        <androidx.cardview.widget.CardView
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="18dp"
-            android:elevation="18dp"
-            android:backgroundTint="#144C29"
-            android:padding="5dp"
-            >
-            <LinearLayout
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
                 >
-                <CheckBox
-                    android:id="@+id/chkmid"
-                    android:textDirection="rtl"
-                    android:layout_width="30dp"
-                    android:textSize="10sp"
-                    android:layout_height="match_parent"
-                    android:buttonTint="@color/white"
-                    android:textColor="@color/white"
-                    />
                 <TextView
-                    android:id="@+id/chckboxmid"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/medium"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Medium"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:gravity="center"
-                    android:paddingEnd="10dp"
+                    android:padding="20dp"
+                    android:background="#827717"
                     android:textColor="@color/white"
+                    android:layout_gravity="center"
                     />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="18dp"
-            android:elevation="18dp"
-            android:backgroundTint="#972A50"
-            android:padding="5dp"
-            >
-            <LinearLayout
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:padding="10dp"
+                android:paddingStart="10dp"
                 >
-                <CheckBox
-                    android:id="@+id/chkhard"
-                    android:textDirection="rtl"
-                    android:layout_width="30dp"
-                    android:textSize="10sp"
-                    android:layout_height="match_parent"
-                    android:buttonTint="@color/white"
-                    android:textColor="@color/white"
-                    />
                 <TextView
-                    android:id="@+id/chckboxhard"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/hard"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Hard"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:gravity="center"
-                    android:paddingEnd="10dp"
+                    android:padding="20dp"
+                    android:background="#BF360C"
                     android:textColor="@color/white"
+                    android:layout_gravity="center"
                     />
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 <!--    content filters/tags-->
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/difficultyselect"
-        android:layout_centerVertical="true"
+        android:id="@+id/recyclerview_contentfilters"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerview_contentfilters"
-        android:scrollbars="vertical"
-        android:padding="5dp"
+        android:layout_below="@+id/difficultyselect"
         android:layout_centerInParent="true"
-        tools:listitem="@layout/contentview"
-        >
+        android:scrollbars="horizontal"
+        tools:listitem="@layout/contentview">
 
     </androidx.recyclerview.widget.RecyclerView>
 

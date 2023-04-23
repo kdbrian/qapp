@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="10dp"
+    android:padding="8dp"
     >
 
     <androidx.cardview.widget.CardView
@@ -12,35 +12,21 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="18dp"
         android:elevation="18dp"
-        android:backgroundTint="#303F9F"
-        android:padding="5dp"
+        android:backgroundTint="#8B96DA"
+        android:padding="15dp"
         >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
-            <CheckBox
-                android:id="@+id/chckbox"
-                android:textDirection="rtl"
-                android:layout_width="30dp"
-                android:textSize="10sp"
-                android:layout_height="match_parent"
-                android:buttonTint="@color/white"
-                android:textColor="@color/white"
-                />
             <TextView
                 android:id="@+id/chckboxtxt"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:text="Linux"
+                android:layout_height="wrap_content"
+                tools:text="Programming"
+                android:maxLines="1"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:paddingEnd="10dp"
+                android:padding="12dp"
                 android:textColor="@color/white"
                 />
-        </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 
