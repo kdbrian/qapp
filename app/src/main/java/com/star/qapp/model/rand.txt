@@ -1,0 +1,69 @@
+
+    "id": 685,
+    "question": "What is UMASK?",
+    "description": null,
+    "answers": {
+      "answer_a": "UMASK is a Unix environment variable, which automatically sets file permissions created files.",
+      "answer_b": "UMASK is a Unix environment variable, which automatically sets the file visibility.",
+      "answer_c": "UMASK is a Unix environment variable, which not really used anymore and is considered legacy.",
+      "answer_d": "UMASK is a Unix environment variable, which is replaced by the chmod command now however it's still largely used.",
+      "answer_e": null,
+      "answer_f": null
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false",
+      "answer_e_correct": "false",
+      "answer_f_correct": "false"
+    },
+    "correct_answer": null,
+    "explanation": null,
+    "tip": null,
+    "tags": [
+      {
+        "name": "BASH"
+      },
+      {
+        "name": "Linux"
+      }
+    ],
+    "category": "Linux",
+    "difficulty": "Easy"
+  }]
+
+  {
+  "id":686,
+  "question":"Which command can be used to write onto other currently logged in user’s console output terminal.",
+  "description":null,
+  "answers":
+    {
+        "answer_a":"notify",
+        "answer_b":"alert",
+        "answer_c":"write",
+        "answer_d":"broadcast",
+        "answer_e":null,
+        "answer_f":null
+    },
+  "multiple_correct_answers":"false",
+  "correct_answers":
+        {
+            "answer_a_correct":"false",
+            "answer_b_correct":"false",
+            "answer_c_correct":"true",
+            "answer_d_correct":"false",
+            "answer_e_correct":"false",
+            "answer_f_correct":"false"
+        },
+  "correct_answer":null,
+  "explanation":null,
+  "tip":null,
+  "tags":[
+    {"name":"BASH"},
+    {"name":"Linux"}
+  ],
+  "category":"Linux",
+  "difficulty":"Easy"
+  }
