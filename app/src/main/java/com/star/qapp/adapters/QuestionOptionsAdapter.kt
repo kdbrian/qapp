@@ -1,17 +1,17 @@
-package com.star.qapp
+package com.star.qapp.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.star.qapp.R
 
-class CustomAdapter : RecyclerView.Adapter<CustomAdapter.CustomViewHolder>() {
+class QuestionOptionsAdapter : RecyclerView.Adapter<QuestionOptionsAdapter.CustomViewHolder>() {
 
     var optionsAvailable = listOf(
-        "Linux","Bash","Windows","Docker","Devops"
+        "Linux","Bash","Windows","Docker","Devops","Networking","Programming",
+        "PHP", "JS","Python","Cloud","Kubernetes"
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
