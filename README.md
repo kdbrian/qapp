@@ -25,3 +25,6 @@ A Kotlin application that use the <code>quiz app <a href="https://quizapi.io/">a
 # Also it use Firebase Authentication
 
 # This is just the initial version of the applications and is open to Suggestion and modifications
+
+
+## Note: Am Going to transform the whole UI to use Jetpack Compose
